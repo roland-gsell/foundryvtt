@@ -2,7 +2,7 @@ main()
 
 async function main() {
     console.log("player AoE macro started")
-    let t = canvas.scene.tokens.filter(t => t.actor && t.actor.hasPlayerOwner);
+    let t = canvas.tokens.documentCollection.filter(t => t.data.disposition === 1);
     t.forEach(decrease);
 }
 
